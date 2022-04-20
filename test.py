@@ -7,8 +7,11 @@ def main():
 
 	name = "Josep"
 	age = 26
+	city = "Badalona"
 
-	print(name + " is " + str(age) + " years old.")
+
+	print(name + " is " + str(age) + " years old and lives in " + city + ".")
+
 
 
 
