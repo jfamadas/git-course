@@ -2,6 +2,9 @@
 def initialize():
 	print("Test 1")
 
+def vehicles():
+	return ["car", "truck", "bike"]
+
 def main():
 	initialize()
 
