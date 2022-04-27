@@ -8,11 +8,11 @@ def main():
 	name = "Josep"
 	age = 26
 	city = "Badalona"
-	user = "user2"
+	user = "2"
 
 
 	print(name + " is " + str(age) + " years old and lives in " + city + ".")
-	print(name + " is user number: " + user)
+	print(name + " is who eddited it. His ID is: " + user)
 
 
 
