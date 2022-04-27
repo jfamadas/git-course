@@ -2,6 +2,9 @@
 def initialize():
 	print("Test 1")
 
+def vehicles():
+	return ["car", "truck", "bike"]
+
 def main():
 	initialize()
 
@@ -13,6 +16,7 @@ def main():
 
 	print(name + " is " + str(age) + " years old and lives in " + city + ".")
 	print(name + " is user number: " + user)
+	print(vehicles())
 
 
 
