@@ -1,0 +1,36 @@
+name: Deployment Pipeline
+
+on:
+  push:
+      branches:
+        - master
+
+jobs:
+  deploy:
+      runs-on: ubuntu-18.04
+      steps:
+        - name: Checkout code 
+          uses: actions/checkout@v2
+
+        - uses: actions/setup-python@v3
+          with:
+            python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
+            architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
+            cache: 'pip'
+
+        - name: Install dependencies
+          run: pip install -r requirements.txt
+
+        - name: Python Linter
+          uses: sunnysid3up/python-linter@master
+          with:
+            source: "src"
+            mypy-options: "--ignore-missing-imports --show-error-codes"
+            pylint-options: "--rcfile=setup.cfg"
+            isort-options: "-w 100"
+            django: true
+
+        #- name: Run Script
+        #  run: python my_script.py
+
+        
