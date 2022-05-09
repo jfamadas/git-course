@@ -9,6 +9,11 @@ jobs:
   hello_world:
       runs-on: ubuntu-18.04
       steps:
+        - name: Echo starting
+          run: |
+            echo "Starting the process"
         - name: Echo the message
           run: |
-            echo "Hola mundo!"
+            echo date
+        - run: |
+            ls -l
