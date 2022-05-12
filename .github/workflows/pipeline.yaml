@@ -13,8 +13,8 @@ jobs:
         uses: styfle/cancel-workflow-action@0.9.1
         with:
           access_token: ${{ github.token }}
-  
-  lint:
+
+  deploy_and_test:
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout code 
@@ -38,10 +38,6 @@ jobs:
           # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
-
-  test:
-    runs-on: ubuntu-18.04
-    steps:
       - name: Run the tests
         run: python -m unittest -v test_calculator.py
 
