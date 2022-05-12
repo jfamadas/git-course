@@ -14,7 +14,7 @@ jobs:
 
         - uses: actions/setup-python@v3
           with:
-            python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
+            python-version: '3.10' # Version range or exact version of a Python version to use, using SemVer's version range syntax
             architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
             cache: 'pip'
 
@@ -25,10 +25,10 @@ jobs:
           uses: sunnysid3up/python-linter@master
           with:
             source: "."
-            mypy-options: "--ignore-missing-imports --show-error-codes"
-            pylint-options: "--rcfile=setup.cfg"
-            isort-options: "-w 100"
-            django: true
+            #mypy-options: "--ignore-missing-imports --show-error-codes"
+            #pylint-options: "--rcfile=setup.cfg"
+            #isort-options: "-w 100"
+            #django: true
 
         #- name: Run Script
         #  run: python my_script.py
