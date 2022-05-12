@@ -1,5 +1,6 @@
 import numpy as np
 
+
 class Calculator:
     """ A simple calculator App"""
 
@@ -28,7 +29,3 @@ class Calculator:
             raise ValueError('Can not calculate sqrt of a negative number.')
 
         return np.sqrt(x)
-
-# if __name__ == "__main__":
-#     print(Calculator.sqrt(-4))
-
